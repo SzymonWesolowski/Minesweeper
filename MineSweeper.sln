@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MineSweeper.Domain", "MineSweeper.Domain\MineSweeper.Domain.csproj", "{D487AA44-BE13-4FD6-B583-5C650BA78147}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Domain", "1-Domain", "{61F56C7A-DC21-47AE-B3F9-D8122BB194B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Tests", "3-Tests", "{EA458B42-9EBE-4613-988D-33791AD6568A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MineSweeper.Tests", "MineSweeperTests\MineSweeper.Tests.csproj", "{B7B23A15-80E0-4CA2-8EAB-72A615FC7FAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{204408D1-4741-4E53-819D-ADE5D4D4055A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MineSweeper.Application", "MineSweeper.Application\MineSweeper.Application.csproj", "{5C694BB2-8934-40F1-BA6A-D5E772F1F75A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Presentation", "3-Presentation", "{E0434D59-C510-443B-881A-EC96F9CAA476}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MineSweeper.TestPresentation", "MineSweeper.TestPresentation\MineSweeper.TestPresentation.csproj", "{1CBACB05-A4F9-4356-9FAE-218954758E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D487AA44-BE13-4FD6-B583-5C650BA78147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D487AA44-BE13-4FD6-B583-5C650BA78147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D487AA44-BE13-4FD6-B583-5C650BA78147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D487AA44-BE13-4FD6-B583-5C650BA78147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B23A15-80E0-4CA2-8EAB-72A615FC7FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B23A15-80E0-4CA2-8EAB-72A615FC7FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B23A15-80E0-4CA2-8EAB-72A615FC7FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B23A15-80E0-4CA2-8EAB-72A615FC7FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C694BB2-8934-40F1-BA6A-D5E772F1F75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C694BB2-8934-40F1-BA6A-D5E772F1F75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C694BB2-8934-40F1-BA6A-D5E772F1F75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C694BB2-8934-40F1-BA6A-D5E772F1F75A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CBACB05-A4F9-4356-9FAE-218954758E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CBACB05-A4F9-4356-9FAE-218954758E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CBACB05-A4F9-4356-9FAE-218954758E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CBACB05-A4F9-4356-9FAE-218954758E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D487AA44-BE13-4FD6-B583-5C650BA78147} = {61F56C7A-DC21-47AE-B3F9-D8122BB194B1}
+		{B7B23A15-80E0-4CA2-8EAB-72A615FC7FAD} = {EA458B42-9EBE-4613-988D-33791AD6568A}
+		{5C694BB2-8934-40F1-BA6A-D5E772F1F75A} = {204408D1-4741-4E53-819D-ADE5D4D4055A}
+		{1CBACB05-A4F9-4356-9FAE-218954758E56} = {E0434D59-C510-443B-881A-EC96F9CAA476}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29E2C647-2B63-4F06-B3B9-C18F42B299FF}
+	EndGlobalSection
+EndGlobal

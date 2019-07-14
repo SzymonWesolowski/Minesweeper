@@ -9,11 +9,10 @@ namespace MineSweeper.Domain
 
     public class CheckSquare : ICheckSquare
     {
-
-
         public SquareStatus Check(IGrid grid, uint yAxis, uint xAxis)
         {
-            return !grid.MineField[yAxis, xAxis].IsUncovered ? SquareStatus.Covered :
+            return grid.MineField[yAxis, xAxis].IsFlagged ? SquareStatus.Flagged :
+                !grid.MineField[yAxis, xAxis].IsUncovered ? SquareStatus.Covered :
                 grid.MineField[yAxis, xAxis].IsMine ? SquareStatus.Mine :
                 grid.MineField[yAxis, xAxis].AdjacentSquaresWithMines == 0 ? SquareStatus.Empty :
                 grid.MineField[yAxis, xAxis].AdjacentSquaresWithMines == 1 ? SquareStatus.OneAdjacentMine :

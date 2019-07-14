@@ -1,5 +1,4 @@
-﻿using MineSweeper.Domain;
-using StructureMap;
+﻿using StructureMap;
 
 namespace MineSweeper.Application
 {

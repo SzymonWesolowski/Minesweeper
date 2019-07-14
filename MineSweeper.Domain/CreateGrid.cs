@@ -12,7 +12,7 @@ namespace MineSweeper.Domain
     {
         private readonly IRandomNumbersGenerator _random;
 
-        public CreateGrid(IRandomNumbersGenerator random, IGrid grid)
+        public CreateGrid(IRandomNumbersGenerator random)
         {
             _random = random;
         }
@@ -31,7 +31,7 @@ namespace MineSweeper.Domain
             {
                 for (int j = 0; j < xAxis; j++)
                 {
-                    grid.MineField[i, j] = new Square(false, false);
+                    grid.MineField[i, j] = new Square(false, false, false);
                 }
             }
 

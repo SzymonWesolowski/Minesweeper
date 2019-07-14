@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MineSweeper.Domain;
-using MineSweeper.Domain.Model;
+﻿using MineSweeper.Domain;
 
 namespace MineSweeper.Application
 {

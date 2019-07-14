@@ -11,14 +11,16 @@
     public class Square : ISquare
     {
 
-        public Square(bool isMine, bool isUncovered)
+        public Square(bool isMine, bool isUncovered, bool isFlagged )
         {
             IsMine = isMine;
             IsUncovered = isUncovered;
+            IsFlagged = isFlagged;
         }
 
         public bool IsUncovered { get; set; }
         public bool IsMine { get; set; }
+        public bool IsFlagged { get; set; }
         public uint AdjacentSquaresWithMines { get; set; }
 
     }

@@ -15,6 +15,8 @@ namespace MineSweeper.Domain
         {
             if (grid.MineField[yAxis, xAxis].IsMine && chosed)
                 return false;
+            if (grid.MineField[yAxis, xAxis].IsFlagged && chosed)
+                return true;
             if (!grid.MineField[yAxis, xAxis].IsMine)
             {
                 grid.MineField[yAxis, xAxis].IsUncovered = true;
@@ -26,7 +28,10 @@ namespace MineSweeper.Domain
                             continue;
                         try
                         {
-                            if (!grid.MineField[k, l].IsMine && !grid.MineField[k, l].IsUncovered)
+                            if (!grid.MineField[k, l].IsMine && !grid.MineField[k, l].IsUncovered &&
+                                !grid.MineField[k, l].IsFlagged &&
+                                (grid.MineField[yAxis, xAxis].AdjacentSquaresWithMines == 0 ||
+                                 grid.MineField[k, l].AdjacentSquaresWithMines == 0))
                             {
                                 grid.MineField[k, l].IsUncovered = true;
                                 if (grid.MineField[k, l].AdjacentSquaresWithMines == 0)

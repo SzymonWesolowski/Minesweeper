@@ -5,7 +5,8 @@ namespace MineSweeper.Application
 {
     public interface IMineSweeperOperations
     {
-        void DigSquare();
+        bool DigSquare();
+        bool FlagSquare();
     }
 
     public class MineSweeperOperations : IMineSweeperOperations
@@ -14,27 +15,39 @@ namespace MineSweeper.Application
         private readonly ICreateGrid _createGrid;
         private readonly ICheckSquare _checkSquare;
         private readonly IDigSquare _digSquare;
+        private readonly IFlagSquare _flagSquare;
         private readonly IUserOperations _userOperations;
         private uint _yAxis;
         private uint _xAxis;
 
-        public MineSweeperOperations(ICreateGrid createGrid, ICheckSquare checkSquare, IDigSquare digSquare,
+        public MineSweeperOperations(ICreateGrid createGrid, ICheckSquare checkSquare, IDigSquare digSquare, IFlagSquare flagSquare,
             IUserOperations userOperations)
         {
             _createGrid = createGrid;
             _checkSquare = checkSquare;
             _digSquare = digSquare;
+            _flagSquare = flagSquare;
             _userOperations = userOperations;
             _grid = FillGrid();
         }
 
 
-        public void DigSquare()
+        public bool DigSquare()
         {
             var yAxisLocation = _userOperations.GetNumber("podaj y");
             var xAxisLocation = _userOperations.GetNumber("podaj x");
-            _digSquare.Dig(_grid, yAxisLocation, xAxisLocation);
+             bool continiuePlay = _digSquare.Dig(_grid, yAxisLocation, xAxisLocation);
             ShowGrid(_grid);
+            return continiuePlay;
+        }
+
+        public bool FlagSquare()
+        {
+            var yAxisLocation = _userOperations.GetNumber("podaj y");
+            var xAxisLocation = _userOperations.GetNumber("podaj x");
+            _flagSquare.Flag(_grid, yAxisLocation, xAxisLocation);
+            ShowGrid(_grid);
+            return true;
         }
 
         private IGrid FillGrid()
@@ -60,5 +73,6 @@ namespace MineSweeper.Application
 
             _userOperations.PrintGrid(statusGrid);
         }
+
     }
 }

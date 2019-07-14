@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
-using System.Reflection;
-
-namespace MineSweeper.Domain.Model
+﻿namespace MineSweeper.Domain.Model
 {
     public interface IGrid
     {

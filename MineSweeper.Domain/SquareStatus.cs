@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MineSweeper.Domain
+﻿namespace MineSweeper.Domain
 {
     public enum SquareStatus
     {
@@ -17,5 +13,6 @@ namespace MineSweeper.Domain
         SixAdjacentMines,
         SevenAdjacentMines,
         EightAdjacentMines,
+        Flagged
     }
 }

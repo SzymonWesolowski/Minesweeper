@@ -1,5 +1,4 @@
-﻿using MineSweeper.Domain.Model;
-using StructureMap;
+﻿using StructureMap;
 
 namespace MineSweeper.Domain
 {
@@ -12,7 +11,6 @@ namespace MineSweeper.Domain
                 s.TheCallingAssembly();
                 s.WithDefaultConventions();
             });
-            For<IGrid>().Use<Grid>();
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MineSweeper.Application;
+﻿using MineSweeper.Application;
 using StructureMap;
 
 namespace MineSweeper.TestPresentation

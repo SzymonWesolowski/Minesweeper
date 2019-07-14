@@ -25,21 +25,33 @@ namespace MineSweeper.TestPresentation
             {
                 for (int j = 0; j < status.GetLength(1); j++)
                 {
-                    Console.Write($"|{dictionary[status[i, j]]}");
+                    Console.Write($"|{_dictionary[status[i, j]]}");
                 }
 
                 Console.Write("|\n");
+                for (int j = 0; j < status.GetLength(0)*2+1; j++)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine();
             }
 
             for (int i = 0; i < status.GetLength(0)*2; i++)
             {
                 Console.Write("-");
+            }            for (int i = 0; i < status.GetLength(0)*2; i++)
+            {
+                Console.Write("-");
             }
+            Console.WriteLine();
         }
 
-        private readonly Dictionary<SquareStatus, char> dictionary = new Dictionary<SquareStatus, char>
+
+
+        private readonly Dictionary<SquareStatus, char> _dictionary = new Dictionary<SquareStatus, char>
         {
             {SquareStatus.Covered, ' '}, {SquareStatus.Mine, 'x'}, {SquareStatus.Empty, 'E'},
+            {SquareStatus.Flagged, 'T'},
             {SquareStatus.OneAdjacentMine, '1'}, {SquareStatus.TwoAdjacentMines, '2'},
             {SquareStatus.ThreeAdjacentMines, '3'}, {SquareStatus.FourAdjacentMines, '4'},
             {SquareStatus.FiveAdjacentMines, '5'},
